@@ -1,6 +1,6 @@
+from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from .models import Article
-from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from . import forms
 

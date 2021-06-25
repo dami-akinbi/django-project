@@ -1,15 +1,15 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
   <head>
     <meta charset="utf-8">
-    <title>Articles</title>
+    <title>Djangonauts</title>
     <link rel="stylesheet" href="{% static 'styles.css' %}">
   </head>
   <body>
-    <div class="wrapper">
-      <h1><a href="{% url 'home' %}"><img src="{% static 'logo.png' %}" /></a></h1>
+    <header class="wrapper">
+      <h1><a href="{% url 'home' %}"><img src="{% static 'logo.png' %}" alt="djangonautic" /></a></h1>
       <nav>
         <ul>
           {% if user.is_authenticated %}
@@ -26,6 +26,8 @@
           {% endif %}
         </ul>
       </nav>
+    </header>
+    <div class="wrapper">
       {% block content %}
       {% endblock %}
     </div>
